@@ -15,4 +15,5 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-//Where is figma url?? 
+//figma url
+https://www.figma.com/design/BSpOUZJcTzP8XS8ERvXCAl/Untitled?node-id=234-1694&t=O5LoUMZp5sxEzQ59-0
