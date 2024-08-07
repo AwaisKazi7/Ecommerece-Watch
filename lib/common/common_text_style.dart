@@ -10,4 +10,12 @@ class CommonTextStyle {
     // required imported Text Font Family
     fontFamily: 'Poppins',
   );
+
+  //HomeScreen
+  static const TextStyle homeText = TextStyle(
+    color: CommonColors.primaryColor,
+    fontSize: 24.0, // Text size
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Poppins', // Text weight
+  );
 }
