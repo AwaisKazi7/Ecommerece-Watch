@@ -48,7 +48,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
   
 
 # For information on the generic Dart part of this file, see the
@@ -78,11 +78,12 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: asset/fonts/Poppins/Poppins-Regular.ttf
+        # - asset: fonts/Poppins-Italic.ttf
+          weight: 700
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

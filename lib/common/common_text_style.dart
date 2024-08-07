@@ -8,6 +8,6 @@ class CommonTextStyle {
     fontSize: 16,
     color: CommonColors.primaryColor,
     // required imported Text Font Family
-    // fontFamily: 'DM_Sans',
+    fontFamily: 'Poppins',
   );
 }
