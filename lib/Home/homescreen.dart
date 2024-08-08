@@ -33,7 +33,7 @@ class Homescreen extends StatelessWidget {
                       backgroundColor: CommonColors.greenColor,
                       child: CircleAvatar(
                         backgroundColor: CommonColors.greenColor,
-                        radius: 14.0, // Adjust the radius as needed
+                        radius: 16.0, // Adjust the radius as needed
                         backgroundImage: NetworkImage(
                             "https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"), // Image URL
                       ),
@@ -47,7 +47,7 @@ class Homescreen extends StatelessWidget {
                           color: CommonColors.primaryColor,
                           fontSize: 24.0, // Text size
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Poppins',// Text weight
+                          fontFamily: 'Poppins', // Text weight
                         ),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
@@ -58,47 +58,53 @@ class Homescreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(30.0),
-            child: Container(
+          Container(
               height: 60,
               padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.06),
               decoration: BoxDecoration(
                 color: CommonColors.searchColor,
                 borderRadius: BorderRadius.circular(60.0),
               ),
-              child: Row(children: <Widget>[
-                Icon(
-                  Icons.search,
-                  color: CommonColors.primaryColor,
-                  size: screenWidth * 0.08,
-                ),
-                SizedBox(width: screenWidth * 0.02),
-                Expanded(child: TextField(
-                  decoration: InputDecoration(
-                        hintText: 'Search Watch, Brands', // Hint text inside the TextField
-                        hintStyle: TextStyle(
-                          color: Colors.grey[600],
-                          fontSize: 14.0, // Font size of the hint text
-                          fontWeight: FontWeight.w200, // Hint text color
-                        ),
-                        border: InputBorder.none, // Remove the default border
+                child: Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Image.asset(
+                        'assets/images/search.png',
+                        width: 50,
+                        height: 50,
+                        color: Colors.black,
                       ),
-                ),
-                ),
-                const CircleAvatar(
-                  radius: 24.0,
-                  backgroundColor: CommonColors.greenColor,
-                  child: Icon(
-                      Icons.tune,
-                      color: CommonColors.searchColor,
-                      size: 30, // Dynamic icon size
                     ),
+                    SizedBox(width: screenWidth * 0.01),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText:
+                              'Search Watch, Brands', // Hint text inside the TextField
+                          hintStyle: TextStyle(
+                            color: Colors.grey[600],
+                            fontSize: 14.0, // Font size of the hint text
+                            fontWeight: FontWeight.w200, // Hint text color
+                          ),
+                          border: InputBorder.none, // Remove the default border
+                        ),
+                      ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 50),
+                      child: CircleAvatar(
+                          radius: 24.0,
+                          backgroundColor: CommonColors.greenColor,
+                          child: Image.asset(
+                            'assets/images/filters.png',
+                            width: 24,
+                            height: 24,
+                            color: CommonColors.searchColor,
+                          ),
+                        ),
+                    ),
+                  ],
                 ),
-              ],
-              ),
             ),
-          )
         ],
       ),
     );
