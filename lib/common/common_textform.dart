@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watches_project_ubaid/common/common_colors.dart';
 
 class CommonTextform extends StatelessWidget {
   final String hintText;
@@ -61,13 +62,21 @@ class CommonTextform extends StatelessWidget {
     if (suffixIcon != null) {
       return GestureDetector(
         onTap: onSuffixIconTap,
-        child: Icon(suffixIcon),
+        child: Icon(suffixIcon,),
       );
     } else if (suffixImage != null) {
       return GestureDetector(
-        onTap: onSuffixIconTap,
-        child: Image.asset(suffixImage!),
-      );
+  onTap: onSuffixIconTap,
+  child: Padding(
+    padding: const EdgeInsets.only(right: 8.0),
+    child: ClipOval(
+      child: Container(
+        color: CommonColors.greenColor,
+        child: Image.asset(suffixImage! ))),
+  )
+
+);
+
     }
     return null;
   }

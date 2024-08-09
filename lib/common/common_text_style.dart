@@ -18,4 +18,10 @@ class CommonTextStyle {
     fontWeight: FontWeight.bold,
     fontFamily: 'Poppins', // Text weight
   );
+  static const TextStyle homescreenhead = TextStyle(
+    color: CommonColors.primaryColor,
+    fontSize: 30.0, // Text size
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Poppins', // Text weight
+  );
 }
