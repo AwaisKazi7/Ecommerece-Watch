@@ -6,7 +6,7 @@ class CommonTextStyle {
   static const TextStyle commonButtonStyle = TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 16,
-    color: CommonColors.primaryColor,
+    color: CommonColors.buttontext,
     // required imported Text Font Family
     fontFamily: 'Poppins',
   );
@@ -22,6 +22,30 @@ class CommonTextStyle {
     color: CommonColors.primaryColor,
     fontSize: 30.0, // Text size
     fontWeight: FontWeight.bold,
+    fontFamily: 'Poppins', // Text weight
+  );
+  static const TextStyle cardext1 = TextStyle(
+    color: CommonColors.primaryColor,
+    fontSize: 16.0, // Text size
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins', // Text weight
+  );
+  static const TextStyle cardext2 = TextStyle(
+    color: CommonColors.primaryColor,
+    fontSize: 16.0, // Text size
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Poppins', // Text weight
+  );
+  static const TextStyle cardext3 = TextStyle(
+    color: CommonColors.primaryColor,
+    fontSize: 16.0, // Text size
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins', // Text weight
+  );
+  static const TextStyle cardext4 = TextStyle(
+    color: CommonColors.primaryColor,
+    fontSize: 16.0, // Text size
+    fontWeight: FontWeight.w400,
     fontFamily: 'Poppins', // Text weight
   );
 }

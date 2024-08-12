@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:watches_project_ubaid/common/common_button.dart';
+import 'package:watches_project_ubaid/common/horizontal_card.dart';
 import 'package:watches_project_ubaid/common/common_colors.dart';
 import 'package:watches_project_ubaid/common/common_text.dart';
 import 'package:watches_project_ubaid/common/common_text_style.dart';
 import 'package:watches_project_ubaid/common/common_textform.dart';
+import 'package:watches_project_ubaid/common/vertical_card.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key, required String title});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: CommonColors.backgroundColor,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 60),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
         child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,7 +27,7 @@ class Homescreen extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 10),
                     child: CircleAvatar(
-                      radius: 26.0, 
+                      radius: 26.0,
                       backgroundColor: CommonColors.greenColor,
                       child: CircleAvatar(
                         backgroundColor: CommonColors.greenColor,
@@ -66,92 +68,108 @@ class Homescreen extends StatelessWidget {
                 ),
                 borderColor: Colors.transparent,
               ),
-            ]),
-
-        //       body: Padding(
-        //         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 60),
-        //         child: Column(
-        //           mainAxisAlignment: MainAxisAlignment.start,
-        //           crossAxisAlignment: CrossAxisAlignment.center,
-        //           children: <Widget>[
-        //             // SizedBox(
-        //             //   height: screenWidth * 0.05,
-        //             // ),
-        //             const Row(
-        //               mainAxisSize: MainAxisSize.min,
-        //               mainAxisAlignment: MainAxisAlignment.center,
-        //               children: <Widget>[
-        //                 CircleAvatar(
-        //                   backgroundColor: CommonColors.greenColor,
-        //                   child: CircleAvatar(
-        //                     backgroundColor: CommonColors.greenColor,
-        //                     radius: 16.5, // Adjust the radius as needed
-        //                     backgroundImage: NetworkImage(
-        //                         "https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"), // Image URL
-        //                   ),
-        //                 ),
-        //                 SizedBox(width: 16.0), // Space between CircleAvatar and text
-        //                 Expanded(
-        //                   child: CommonText(
-        //                     text: 'Discover \nPremium Watches',
-        //                     style: CommonTextStyle.homeText,
-        //                   ),
-        //                 ),
-        //               ],
-        //             ),
-        //             CommonTextform(
-        //                 // hintStyle: TextStyle(fontFamily: 'Poppins'),
-        //                 prefixIcon: Icons.ac_unit_sharp,
-        //                 suffixIcon: Icons.abc,
-        //                 fillColor: Colors.transparent,
-        //                 borderRadius: 31.5,
-        //                 hintText: 'Search Watch , Brands',
-        //                 controller: TextEditingController())
-        //             // Container(
-        //             //   height: 60,
-        //             //   padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.06),
-        //             //   decoration: BoxDecoration(
-        //             //     color: CommonColors.searchColor,
-        //             //     borderRadius: BorderRadius.circular(60.0),
-        //             //   ),
-        //             //   child: Row(
-        //             //     children: <Widget>[
-        //             //       Icon(
-        //             //         Icons.search,
-        //             //         color: CommonColors.primaryColor,
-        //             //         size: screenWidth * 0.08,
-        //             //       ),
-        //             //       SizedBox(width: screenWidth * 0.02),
-        //             //       Expanded(
-        //             //         child: TextField(
-        //             //           decoration: InputDecoration(
-        //             //             hintText:
-        //             //                 'Search Watch, Brands', // Hint text inside the TextField
-        //             //             hintStyle: TextStyle(
-        //             //               color: Colors.grey[600],
-        //             //               fontSize: 14.0, // Font size of the hint text
-        //             //               fontWeight: FontWeight.w200, // Hint text color
-        //             //             ),
-        //             //             border: InputBorder.none, // Remove the default border
-        //             //           ),
-        //             //         ),
-        //             //       ),
-        //             //       const CircleAvatar(
-        //             //         radius: 24.0,
-        //             //         backgroundColor: CommonColors.greenColor,
-        //             //         child: Icon(
-        //             //           Icons.tune,
-        //             //           color: CommonColors.searchColor,
-        //             //           size: 30, // Dynamic icon size
-        //             //         ),
-        //             //       ),
-        //             //     ],
-        //             //   ),
-        //             // )
-        //           ],
-        //         ),
-        // >>>>>>> 5ff9d273e473bcbc60aa5edc95f4ddfec4ce4451
-        //       ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30.0),
+                child: Row(
+                  children: [
+                    CommonButton(
+                      backgroundColor: CommonColors.greenColor,
+                      text: "Luxury",
+                      onPressed: () {},
+                      textStyle: CommonTextStyle.commonButtonStyle.copyWith(
+                          // fontFamily: 'Poppins', // Ensure Poppins font
+                          // fontWeight:
+                          //     FontWeight.bold, // Optional: Ensure bold text
+                          // fontSize: 16,
+                          ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    CommonButton(
+                      text: "Casual",
+                      onPressed: () {},
+                      textStyle: CommonTextStyle.commonButtonStyle.copyWith(
+                        fontFamily: 'Poppins', // Ensure Poppins font
+                        fontWeight:
+                            FontWeight.bold, // Optional: Ensure bold text
+                        fontSize: 16,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    CommonButton(
+                      text: "Formal",
+                      onPressed: () {},
+                      textStyle: CommonTextStyle.commonButtonStyle.copyWith(
+                        fontFamily: 'Poppins', // Ensure Poppins font
+                        fontWeight:
+                            FontWeight.bold, // Optional: Ensure bold text
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    HorizontalCard(
+                      text: 'ROLEX',
+                      imagePath: 'assets/images/card1_image.png',
+                      cornerImagePath: 'assets/images/watchlist.png',
+                    ),
+                    HorizontalCard(
+                      text: 'ROLEX',
+                      imagePath: 'assets/images/card1_image.png',
+                      cornerImagePath: 'assets/images/watchlist.png',
+                    ),
+                    HorizontalCard(
+                      text: 'ROLEX',
+                      imagePath: 'assets/images/card1_image.png',
+                      cornerImagePath: 'assets/images/watchlist.png',
+                    ),
+                    HorizontalCard(
+                      text: 'ROLEX',
+                      imagePath: 'assets/images/card1_image.png',
+                      cornerImagePath: 'assets/images/watchlist.png',
+                    ),
+                    HorizontalCard(
+                      text: 'ROLEX',
+                      imagePath: 'assets/images/card1_image.png',
+                      cornerImagePath: 'assets/images/watchlist.png',
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // Number of columns in the grid
+                  crossAxisSpacing: 16.0, // Horizontal spacing between items
+                  mainAxisSpacing: 16.0, // Vertical spacing between items
+                  childAspectRatio: 0.75, // Aspect ratio for each item (width / height)
+                ),
+                itemCount: 4, // Number of items in the grid
+                itemBuilder: (context, index) {
+                  return const VerticalCard(
+                    text: 'ROLEX',
+                    imagePath: 'assets/images/card1_image.png',
+                    cornerImagePath: 'assets/images/watchlist.png',
+                  );
+                },
+              ),
+            ),
+            ],
+            ),
       ),
     );
   }

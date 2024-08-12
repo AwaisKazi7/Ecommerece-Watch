@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watches_project_ubaid/common/common_colors.dart';
 
 import 'common_text_style.dart';
 import 'common_text.dart';
@@ -23,19 +24,19 @@ class CommonButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.backgroundColor = Colors.blue,
+    this.backgroundColor = CommonColors.searchColor,
     this.textColor = Colors.white,
     this.margin,
-    this.width,
-    this.height = 40,
-    this.borderRadius = 10,
+    this.width= 100,
+    this.height = 50,
+    this.borderRadius = 30,
     this.borderWidth = 1,
     this.boxShadow = const [
       BoxShadow(
         color: Colors.grey,
-        spreadRadius: 1,
-        blurRadius: 5,
-        offset: Offset(0, 3),
+        // spreadRadius: 1,
+        // blurRadius: 5,
+        // offset: Offset(0, 3),
       ),
     ],
     this.textStyle = CommonTextStyle.commonButtonStyle,
