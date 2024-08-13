@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:watches_project_ubaid/Home/add_to_cart.dart';
 import 'package:watches_project_ubaid/Home/homescreen.dart';
 
 void main() {
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Homescreen(title: 'Flutter Demo Home Page'),
+      // home: const HomeScreen(),
+      home: const AddToCartScreen(),
     );
   }
 }

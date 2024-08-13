@@ -4,7 +4,7 @@ import 'common_colors.dart';
 class CommonTextStyle {
   //Common Button style
   static const TextStyle commonButtonStyle = TextStyle(
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w400,
     fontSize: 16,
     color: CommonColors.buttontext,
     // required imported Text Font Family
@@ -26,21 +26,21 @@ class CommonTextStyle {
   );
   static const TextStyle cardext1 = TextStyle(
     color: CommonColors.primaryColor,
-    fontSize: 16.0, // Text size
+    fontSize: 32.0, // Text size
     fontWeight: FontWeight.w400,
     fontFamily: 'Poppins', // Text weight
   );
   static const TextStyle cardext2 = TextStyle(
     color: CommonColors.primaryColor,
-    fontSize: 16.0, // Text size
-    fontWeight: FontWeight.bold,
+    fontSize: 24.0, // Text size
+    fontWeight: FontWeight.w600,
     fontFamily: 'Poppins', // Text weight
   );
   static const TextStyle cardext3 = TextStyle(
-    color: CommonColors.primaryColor,
-    fontSize: 16.0, // Text size
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Poppins', // Text weight
+    color: CommonColors.greenColor,
+    fontSize: 20.0, // Text size
+    fontWeight: FontWeight.w700,
+    fontFamily: 'Lato', // Text weight
   );
   static const TextStyle cardext4 = TextStyle(
     color: CommonColors.primaryColor,

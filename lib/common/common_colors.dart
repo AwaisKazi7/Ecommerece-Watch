@@ -7,5 +7,6 @@ class CommonColors {
   //Ubaid Colors
   static const Color searchColor = Color(0xFFFFFFFF);
   static const Color greenColor = Color(0xFF8BC8AA);
-  static const Color buttontext = Color(0xFFD3D3D3);
+  static const Color buttontext = Color(0xFF3F425D);
+  static const Color addcartimgbg = Color(0xFFD9D9D9);
 }

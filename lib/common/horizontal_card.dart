@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:watches_project_ubaid/common/common_colors.dart';
+import 'package:watches_project_ubaid/common/common_text.dart';
 import 'package:watches_project_ubaid/common/common_text_style.dart';
 
 class HorizontalCard extends StatelessWidget {
-  final String text;
+  final String brand;
+  final String modelName;
+  final String description;
+  final String price;
   final String imagePath;
   final String cornerImagePath;
-  
 
   const HorizontalCard({
     Key? key,
-    required this.text,
+    required this.brand,
+    required this.modelName,
+    required this.description,
+    required this.price,
     required this.imagePath,
     required this.cornerImagePath,
   }) : super(key: key);
@@ -18,8 +24,8 @@ class HorizontalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 16),
-      width: 300, // Width of each card
+      margin: const EdgeInsets.only(right: 1),
+      width: 280,
       child: Card(
         color: CommonColors.searchColor,
         shape: RoundedRectangleBorder(
@@ -30,33 +36,31 @@ class HorizontalCard extends StatelessWidget {
             // Text Section
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(left: 10.0, bottom: 30.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  // mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      text,
+                    CommonText(
+                      text: brand,
                       style: CommonTextStyle.cardext1,
                       overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 8),
-                    const Text(
-                      'SEA-DWELLER',
-                      style: TextStyle(
-                        color: CommonColors.primaryColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
+                    CommonText(
+                      text: modelName,
+                      style: CommonTextStyle.cardext2,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(
-                      height: 8,
+                    const SizedBox(height: 8),
+                    Text(
+                      description,
+                      style: CommonTextStyle.cardext3,
                     ),
-                    const Text(
-                      'Simply Dummy Text Of The \nPrinting And',
-                      style: TextStyle(
-                        color: CommonColors.primaryColor,
-                      ),
+                    const SizedBox(height: 8),
+                    CommonText(
+                      text: price,
+                      style: CommonTextStyle.cardext4,
                     ),
                   ],
                 ),
@@ -65,44 +69,46 @@ class HorizontalCard extends StatelessWidget {
             // Image Section
             Padding(
               padding: const EdgeInsets.all(12.0),
-              child: Container(
-                width: 120, // Width of the image container
-                height: 120, // Height of the image container
-                decoration: BoxDecoration(
-                  color: CommonColors.searchColor,
-                  borderRadius: BorderRadius.circular(10),
-                  image: DecorationImage(
-                    image: AssetImage(imagePath),
-                    fit: BoxFit.fill,
-                    alignment: Alignment.center,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 6,
-                      offset: const Offset(0, 4),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    width: 105,
+                    height: 104,
+                    decoration: BoxDecoration(
+                      color: CommonColors.searchColor,
+                      borderRadius: BorderRadius.circular(9),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 1,
+                          blurRadius: 4,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      bottom: 5,
-                      right: 5,
-                      child: Container(
-                        width: 20,
-                        height: 20,
-                        decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(cornerImagePath),
-                                fit: BoxFit.fill,
-                              ),
-                            ),
+                    child: Center(
+                      child: Image.asset(
+                        imagePath,
+                        fit: BoxFit.cover,
                       ),
-                    )
-                  ],
-                ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 5,
+                    right: 5,
+                    child: Container(
+                      width: 13,
+                      height: 16.08,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(cornerImagePath),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
