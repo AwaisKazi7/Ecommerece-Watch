@@ -9,4 +9,7 @@ class CommonColors {
   static const Color greenColor = Color(0xFF8BC8AA);
   static const Color buttontext = Color(0xFF3F425D);
   static const Color addcartimgbg = Color(0xFFD9D9D9);
+  static const Color getstartedbg = Color(0xFF1A2620);
+  static const Color cardext3color = Color(0xFFBDBDBD);
+  static const Color homeHeader = Color(0xFF3F425D);
 }
