@@ -91,6 +91,13 @@ flutter:
         - asset: assets/fonts/Lato/Lato-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+    - family: Playfair_Display
+      fonts:
+        - asset: assets\fonts\Playfair_Display\static\PlayfairDisplay-SemiBold.ttf
+
+    - family: Reem_Kufi_Fun
+      fonts:
+        - asset: assets/fonts/Reem_Kufi_Fun/static/ReemKufiFun-Regular.ttf    
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
