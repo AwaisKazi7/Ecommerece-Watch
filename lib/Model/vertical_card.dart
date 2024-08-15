@@ -55,7 +55,7 @@ class VerticalCard extends StatelessWidget {
           ),
           // Corner Image
           Positioned(
-            top: 8,
+            top: 2,
             right: 8,
             child: Image.asset(
               cornerImagePath,

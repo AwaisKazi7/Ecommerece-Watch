@@ -34,9 +34,6 @@ class CommonButton extends StatelessWidget {
     this.boxShadow = const [
       BoxShadow(
         color: Colors.grey,
-        // spreadRadius: 1,
-        // blurRadius: 5,
-        // offset: Offset(0, 3),
       ),
     ],
     this.textStyle = CommonTextStyle.commonButtonStyle,
@@ -62,7 +59,7 @@ class CommonButton extends StatelessWidget {
                 : borderColor, // Change border color when pre ssed
             width: borderWidth,
           ),
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(borderRadius),
           boxShadow: boxShadow,
         ),
         child: Center(
