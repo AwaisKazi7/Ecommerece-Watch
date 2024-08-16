@@ -1,8 +1,4 @@
-# watches_project_ubaid
-
-A new Flutter project.
-
-## Getting Started
+# Watches Ecommerce Application 
 
 This project is a starting point for a Flutter application.
 
