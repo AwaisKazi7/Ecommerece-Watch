@@ -65,19 +65,18 @@ class HomeScreenController extends GetxController {
   ];
 
   void onNavBarTap(int index) {
-    Get.toNamed(RoutesName.getStarted);
     selectedIndex = index;
     switch (index) {
       case 0:
-        // Navigate to Home Screen
+        Get.toNamed(RoutesName.homescreen);
         break;
       case 1:
-        // Navigate to Favorites Screen
         break;
       case 2:
         // Navigate to Bag Screen
         break;
       case 3:
+        Get.toNamed(RoutesName.addtocart);
         // Navigate to Profile Screen
         break;
       case 4:

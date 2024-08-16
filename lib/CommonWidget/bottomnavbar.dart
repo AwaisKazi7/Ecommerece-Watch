@@ -18,6 +18,7 @@ class CustomBottomNavBar extends StatelessWidget {
       backgroundColor: CommonColors.searchColor,
       type: BottomNavigationBarType.fixed, // To handle multiple items
       currentIndex: currentIndex,
+
       onTap: onTap,
       items: const [
         BottomNavigationBarItem(
@@ -33,15 +34,17 @@ class CustomBottomNavBar extends StatelessWidget {
           label: '', // Empty label
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_bag_outlined),// Replace with your icon
+          icon: Icon(Icons.shopping_bag_outlined), // Replace with your icon
           label: '', // Empty label
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person_3_outlined), // Replace with your icon
-          label: '', // Empty label
+          label: '',
+          // Empty label
         ),
       ],
-      selectedItemColor: CommonColors.greenColor, // Change to your selected item color
+      selectedItemColor:
+          CommonColors.greenColor, // Change to your selected item color
       unselectedItemColor: Colors.grey, // Change to your unselected item color
       showUnselectedLabels: false,
       showSelectedLabels: false,
