@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/add-to-cart', // Set the initial route
+      initialRoute: '/get-started', // Set the initial route
       getPages: [
         GetPage(name: '/get-started', page: () => GetStartedScreen()),
         GetPage(name: '/home', page: () => HomeScreen()),

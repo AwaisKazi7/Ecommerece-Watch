@@ -26,21 +26,20 @@ class VerticalCard extends StatelessWidget {
       height: 271, // Adjust the height as needed
       decoration: BoxDecoration(
         color: CommonColors.searchColor,
-        borderRadius: BorderRadius.circular(8),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            spreadRadius: 2,
-            blurRadius: 6,
-            offset: const Offset(0, 4),
-          ),
-        ],
+        borderRadius: BorderRadius.circular(1),
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Colors.black.withOpacity(0.1),
+        //     spreadRadius: 2,
+        //     blurRadius: 6,
+        //     offset: const Offset(0, 4),
+        //   ),
+        // ],
       ),
       child: Stack(
         children: [
           // Image Section
           Positioned(
-            top: 16,
             left: 24,
             child: Container(
               height: 188,
@@ -48,7 +47,7 @@ class VerticalCard extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(imagePath),
-                  fit: BoxFit.fill, // Ensure the image covers the container
+                  fit: BoxFit.contain, // Ensure the image covers the container
                 ),
               ),
             ),
@@ -59,8 +58,8 @@ class VerticalCard extends StatelessWidget {
             right: 8,
             child: Image.asset(
               cornerImagePath,
-              width: 24,
-              height: 24,
+              width: 19,
+              height: 23.5,
               fit: BoxFit.fill,
             ),
           ),
