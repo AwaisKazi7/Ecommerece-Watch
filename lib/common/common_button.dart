@@ -27,16 +27,13 @@ class CommonButton extends StatelessWidget {
     this.backgroundColor = CommonColors.greenColor,
     this.textColor = Colors.white,
     this.margin,
-    this.width= 101,
+    this.width = 101,
     this.height = 51,
     this.borderRadius = 30,
     this.borderWidth = 1,
     this.boxShadow = const [
       BoxShadow(
         color: Colors.grey,
-        // spreadRadius: 1,
-        // blurRadius: 5,
-        // offset: Offset(0, 3),
       ),
     ],
     this.textStyle = CommonTextStyle.commonButtonStyle,
@@ -62,7 +59,7 @@ class CommonButton extends StatelessWidget {
                 : borderColor, // Change border color when pre ssed
             width: borderWidth,
           ),
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(borderRadius),
           boxShadow: boxShadow,
         ),
         child: Center(

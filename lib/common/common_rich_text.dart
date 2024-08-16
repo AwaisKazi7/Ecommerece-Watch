@@ -23,7 +23,7 @@ class CommonRichText extends StatelessWidget {
     this.overflow,
     this.isThree = false,
     this.text3,
-    this.style3,
+    this.style3, required TextSpan text,
   });
 
   @override

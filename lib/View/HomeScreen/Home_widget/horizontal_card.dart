@@ -25,6 +25,7 @@ class HorizontalCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(right: 1),
+      height: 133,
       width: 280,
       child: Card(
         color: CommonColors.searchColor,
@@ -33,7 +34,6 @@ class HorizontalCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            // Text Section
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
