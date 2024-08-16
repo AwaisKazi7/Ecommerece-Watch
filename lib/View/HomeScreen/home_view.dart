@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:watches_project_ubaid/Model/bottom_nav_bar.dart';
-import 'package:watches_project_ubaid/Controllers/home_controller.dart';
+import 'package:watches_project_ubaid/CommonWidget/bottomnavbar.dart';
+import 'package:watches_project_ubaid/View/HomeScreen/home_controller.dart';
 import 'package:watches_project_ubaid/common/common_button.dart';
 import 'package:watches_project_ubaid/common/common_colors.dart';
 import 'package:watches_project_ubaid/common/common_text.dart';
 import 'package:watches_project_ubaid/common/common_text_style.dart';
 import 'package:watches_project_ubaid/common/common_textform.dart';
-import 'package:watches_project_ubaid/Model/vertical_card.dart';
-import 'package:watches_project_ubaid/Model/horizontal_card.dart';
+import 'package:watches_project_ubaid/View/HomeScreen/Home_widget/vertical_card.dart';
+import 'package:watches_project_ubaid/View/HomeScreen/Home_widget/horizontal_card.dart';
 
 class HomeScreen extends StatelessWidget {
-  final HomeController controller = Get.put(HomeController());
+  final HomeScreenController controller = Get.put(HomeScreenController());
+
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

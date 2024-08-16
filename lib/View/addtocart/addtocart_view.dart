@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:watches_project_ubaid/Model/bottom_nav_bar.dart';
-import 'package:watches_project_ubaid/Controllers/add2cart.dart';
-import 'package:watches_project_ubaid/Widget/stars_widget.dart';
+import 'package:watches_project_ubaid/CommonWidget/bottomnavbar.dart';
+import 'package:watches_project_ubaid/View/addtocart/addtocart_controller.dart';
+import 'package:watches_project_ubaid/CommonWidget/stars_widget.dart';
 import 'package:watches_project_ubaid/common/common_button.dart';
 import 'package:watches_project_ubaid/common/common_colors.dart';
 import 'package:watches_project_ubaid/common/common_text.dart';
@@ -11,6 +11,8 @@ import 'package:watches_project_ubaid/common/common_text_style.dart';
 class AddToCartScreen extends StatelessWidget {
   // Initialize the controller
   final AddToCartController controller = Get.put(AddToCartController());
+
+  AddToCartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class AddToCartScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 const SizedBox(height: 40), 
+                const SizedBox(height: 40),
                 Row(
                   children: [
                     Image.asset(

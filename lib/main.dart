@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:watches_project_ubaid/Controllers/add2cart.dart';
-import 'package:watches_project_ubaid/Controllers/home_controller.dart';
-import 'package:watches_project_ubaid/View/Get_started.dart';
-import 'package:watches_project_ubaid/View/add_to_cart.dart';
-import 'package:watches_project_ubaid/View/homescreen.dart';
+import 'package:watches_project_ubaid/routes.dart/rout_name_string.dart';
+import 'package:watches_project_ubaid/routes.dart/route_page_builder.dart';
 
 void main() {
-  // Initialize GetX controllers
-  Get.put(HomeController());
-  Get.put(AddToCartController());
-
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -24,15 +19,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/get-started', // Set the initial route
-      getPages: [
-        GetPage(name: '/get-started', page: () => GetStartedScreen()),
-        GetPage(name: '/home', page: () => HomeScreen()),
-        GetPage(name: '/add-to-cart', page: () => AddToCartScreen()), // Add other routes as needed
-      ],
-
-      defaultTransition: Transition.fadeIn,
-      transitionDuration: Duration(milliseconds: 30),
+      initialRoute: RoutesName.getStarted,
+      getPages: RoutesPagebuilderList.routList,
     );
   }
 }

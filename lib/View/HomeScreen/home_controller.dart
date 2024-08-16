@@ -1,13 +1,11 @@
 // import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:watches_project_ubaid/Model/cards_classes.dart';
-// import 'package:watches_project_ubaid/Model/horizontal_card.dart';
-// import 'package:watches_project_ubaid/Model/vertical_card.dart';
+import 'package:watches_project_ubaid/View/HomeScreen/Home_widget/cards_classes.dart';
+import 'package:watches_project_ubaid/routes.dart/rout_name_string.dart';
 
-class HomeController extends GetxController {
+class HomeScreenController extends GetxController {
   int selectedIndex = 0;
 
-  // List of horizontal cards data
   final List<HorizontalCardData> horizontalCardList = [
     HorizontalCardData(
       brand: 'ROLEX',
@@ -35,7 +33,6 @@ class HomeController extends GetxController {
     ),
   ];
 
-  // List of vertical cards data
   final List<VerticalCardData> verticalCardList = [
     VerticalCardData(
       brand: 'ROLEX',
@@ -67,10 +64,9 @@ class HomeController extends GetxController {
     ),
   ];
 
-  // Define methods for controller
   void onNavBarTap(int index) {
+    Get.toNamed(RoutesName.getStarted);
     selectedIndex = index;
-    // Add your navigation logic or any other business logic here
     switch (index) {
       case 0:
         // Navigate to Home Screen
