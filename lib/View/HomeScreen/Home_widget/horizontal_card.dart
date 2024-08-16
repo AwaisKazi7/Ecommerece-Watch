@@ -24,9 +24,7 @@ class HorizontalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 1),
-      height: 133,
-      width: 280,
+      width: 255,
       child: Card(
         color: CommonColors.searchColor,
         shape: RoundedRectangleBorder(
@@ -36,7 +34,7 @@ class HorizontalCard extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -46,18 +44,15 @@ class HorizontalCard extends StatelessWidget {
                       style: CommonTextStyle.cardext1,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(height: 8),
                     CommonText(
                       text: modelName,
                       style: CommonTextStyle.cardext2,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(height: 8),
                     Text(
                       description,
                       style: CommonTextStyle.cardext3,
                     ),
-                    const SizedBox(height: 8),
                     CommonText(
                       text: price,
                       style: CommonTextStyle.cardext4,

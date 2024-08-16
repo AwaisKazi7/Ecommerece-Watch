@@ -24,6 +24,12 @@ class CommonTextStyle {
     fontWeight: FontWeight.w500,
     fontFamily: 'Poppins', // Text weight
   );
+  static const TextStyle findTheLuxury = TextStyle(
+    color: CommonColors.homeHeader,
+    fontSize: 16.0, // Text size
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Poppins', // Text weight
+  );
   static const TextStyle searchtext = TextStyle(
     color: CommonColors.primaryColor,
     fontSize: 16.0, // Text size
@@ -75,7 +81,7 @@ class CommonTextStyle {
   );
   static const TextStyle cardext2 = TextStyle(
     color: CommonColors.primaryColor,
-    fontSize: 16.0, // Text size
+    fontSize: 12.0, // Text size
     fontWeight: FontWeight.w600,
     fontFamily: 'Poppins', // Text weight
   );
@@ -87,30 +93,30 @@ class CommonTextStyle {
   );
   static const TextStyle cardext4 = TextStyle(
     color: CommonColors.greenColor,
-    fontSize: 16.0, // Text size
+    fontSize: 11.0, // Text size
     fontWeight: FontWeight.w700,
     fontFamily: 'Poppins', // Text weight
   );
   // Get Started
   static const TextStyle getstartedt1 = TextStyle(
-    color: CommonColors.searchColor,
-    fontSize: 40.0, // Text size
-    fontWeight: FontWeight.w600,
-    fontFamily: 'Playfair_Display', 
-    decoration: TextDecoration.none// Text weight
-  );
+      color: CommonColors.searchColor,
+      fontSize: 40.0, // Text size
+      fontWeight: FontWeight.w600,
+      fontFamily: 'Playfair_Display',
+      decoration: TextDecoration.none // Text weight
+      );
   static const TextStyle getstartedtbt1 = TextStyle(
-    color: CommonColors.primaryColor,
-    fontSize: 24.0, // Text size
-    fontWeight: FontWeight.w700,
-    fontFamily: 'Reem_Kufi_Fun', 
-    decoration: TextDecoration.none// Text weight
-  );
+      color: CommonColors.primaryColor,
+      fontSize: 24.0, // Text size
+      fontWeight: FontWeight.w700,
+      fontFamily: 'Reem_Kufi_Fun',
+      decoration: TextDecoration.none // Text weight
+      );
   static const TextStyle getstartedt2 = TextStyle(
-    color: CommonColors.backgroundColor,
-    fontSize: 13.0, // Text size
-    fontWeight: FontWeight.w400,
-    fontFamily: 'Poppins', 
-    decoration: TextDecoration.none// Text weight
-  );
+      color: CommonColors.backgroundColor,
+      fontSize: 13.0, // Text size
+      fontWeight: FontWeight.w400,
+      fontFamily: 'Poppins',
+      decoration: TextDecoration.none // Text weight
+      );
 }

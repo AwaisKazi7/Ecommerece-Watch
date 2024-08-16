@@ -22,73 +22,67 @@ class VerticalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 176, // Adjust the width as needed
-      height: 271, // Adjust the height as needed
+      padding: const EdgeInsets.all(4),
+      width: 176,
+      height: 271,
       decoration: BoxDecoration(
         color: CommonColors.searchColor,
-        borderRadius: BorderRadius.circular(1),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Colors.black.withOpacity(0.1),
-        //     spreadRadius: 2,
-        //     blurRadius: 6,
-        //     offset: const Offset(0, 4),
-        //   ),
-        // ],
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            spreadRadius: 1,
+            blurRadius: 4,
+            offset: const Offset(2, 2),
+          ),
+        ],
       ),
-      child: Stack(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Image Section
-          Positioned(
-            left: 24,
-            child: Container(
-              height: 188,
-              width: 127,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(imagePath),
-                  fit: BoxFit.contain, // Ensure the image covers the container
+          const SizedBox(
+            height: 8,
+          ),
+          Stack(
+            children: [
+              Expanded(
+                child: Center(
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
-            ),
-          ),
-          // Corner Image
-          Positioned(
-            top: 2,
-            right: 8,
-            child: Image.asset(
-              cornerImagePath,
-              width: 19,
-              height: 23.5,
-              fit: BoxFit.fill,
-            ),
-          ),
-          // Text Section
-          Positioned(
-            bottom: 8,
-            left: 0,
-            right: 0,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CommonText(
-                    text: brand,
-                    style: CommonTextStyle.cardext1,
-                  ),
-                  CommonText(
-                    text: modelName,
-                    style: CommonTextStyle.cardext2,
-                  ),
-                  CommonText(
-                    text: price,
-                    style:
-                        CommonTextStyle.cardext4.copyWith(color: Colors.green),
-                  ),
-                ],
+              Positioned(
+                right: 10,
+                child: Image.asset(
+                  cornerImagePath,
+                  width: 19,
+                  height: 23.5,
+                  fit: BoxFit.fill,
+                ),
               ),
-            ),
+            ],
+          ),
+          const SizedBox(
+            height: 4,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CommonText(
+                text: brand,
+                style: CommonTextStyle.cardext1,
+              ),
+              CommonText(
+                text: modelName,
+                style: CommonTextStyle.cardext2,
+              ),
+              CommonText(
+                text: price,
+                style: CommonTextStyle.cardext4.copyWith(color: Colors.green),
+              ),
+            ],
           ),
         ],
       ),

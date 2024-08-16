@@ -5,6 +5,7 @@ import 'package:watches_project_ubaid/common/common_colors.dart';
 import 'package:watches_project_ubaid/common/common_rich_text.dart';
 import 'package:watches_project_ubaid/common/common_text.dart';
 import 'package:watches_project_ubaid/common/common_text_style.dart';
+import 'package:watches_project_ubaid/routes.dart/rout_name_string.dart';
 
 class GetStartedScreen extends StatelessWidget {
   @override
@@ -55,7 +56,7 @@ class GetStartedScreen extends StatelessWidget {
               text: 'Get Started',
               textStyle: CommonTextStyle.getstartedtbt1,
               onPressed: () {
-                Get.toNamed('/home');
+                Get.toNamed(RoutesName.homescreen);
               },
             ),
           ),
